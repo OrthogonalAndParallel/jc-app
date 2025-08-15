@@ -1,0 +1,57 @@
+{
+  "name": "jc-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build:vue": "vite build",
+    "dev:electron": "NODE_ENV=development electron .",
+    "start": "electron .",
+    "dist": "npm run build:vue && electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.4",
+    "electron": "^37.2.6",
+    "electron-builder": "^26.0.12",
+    "vite": "^6.3.5"
+  },
+  "build": {
+    "appId": "com.youyou.datafixer",
+    "productName": "数据修复工具",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "src/**/*",
+      "dist-vue/**/*",
+      "src/main.js",
+      "src/preload.js",
+      "target/jc-app-1.0-SNAPSHOT-jar-with-dependencies.jar"
+    ],
+    "asar": true,
+    "asarUnpack": [
+      "target/jc-app-1.0-SNAPSHOT-jar-with-dependencies.jar"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "build/icon.icns"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "build/icon.png"
+    }
+  },
+  "dependencies": {
+    "element-plus": "^2.10.7",
+    "vue": "^3.5.18"
+  }
+}
