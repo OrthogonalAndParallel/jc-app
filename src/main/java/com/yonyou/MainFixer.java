@@ -12,7 +12,7 @@ import java.util.Set;
 
 /**
  * @author jinchenj
- * @description 修复数据 Swing 版本
+ * @description 修复数据
  * @create:2025-08-13 18:07:06
  */
 public class MainFixer {
@@ -36,7 +36,7 @@ public class MainFixer {
         }
     }
 
-    private static void executeFix(String is_storage, String codes, String domain, String cookie) throws Exception {
+    public static void executeFix(String is_storage, String codes, String domain, String cookie) throws Exception {
         try {
             System.out.println("开始执行数据修复...");
 
