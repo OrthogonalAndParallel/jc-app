@@ -52,7 +52,7 @@ export default {
   justify-content: center;
   align-items: center;
   background-size: cover;
-  background-image: url('../assets/bg.jpg');
+  background-image: url('/assets/bg.jpg');
   overflow: hidden;
   position: fixed;
 }

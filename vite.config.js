@@ -13,5 +13,10 @@ export default defineConfig({
         host: '0.0.0.0',
         port: 5173
     },
-    base: './' // 使用相对路径，这对 Electron 很重要
+    base: './', // 使用相对路径，这对 Electron 很重要
+    resolve: {
+        alias: {
+            '@': path.resolve(__dirname, './src/vue')
+        }
+    }
 });
