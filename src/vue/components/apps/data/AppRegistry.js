@@ -1,12 +1,17 @@
 import DataFix from './../DataFix.vue'
-// 预先导入图标
-import gitIcon from '/assets/git.jpg'
+import User from './../User.vue'
 
 export const AppRegistry = {
     DataFix: {
         component: DataFix,
-        icon: '/assets/git.jpg',  // 向上三级目录
+        icon: '/assets/git.jpg',
         name: 'DataFix',
+        initMethod: 'initAndShow'
+    },
+    User: {
+        component: User,
+        icon: '/assets/git.jpg',
+        name: 'User',
         initMethod: 'initAndShow'
     }
 }

@@ -1,7 +1,7 @@
 const { contextBridge, ipcRenderer } = require('electron');
 
 contextBridge.exposeInMainWorld('api', {
-    executeFix: (params) => ipcRenderer.send('execute-fix', params),
+    // executeFix: (params) => ipcRenderer.send('execute-fix', params),
     onLogMessage: (callback) => ipcRenderer.on('log-message', (event, data) => {
         callback(event, data);
     }),

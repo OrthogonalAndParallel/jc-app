@@ -1,10 +1,10 @@
-package com.yonyou;
+package com.jc;
 
 import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;
-import javax.swing.*;
-import java.awt.*;
+import com.jc.util.HttpRequestUtil;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;

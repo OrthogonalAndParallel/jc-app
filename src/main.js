@@ -3,6 +3,34 @@ const path = require('path');
 const { spawn } = require('child_process');
 const fs = require('fs');
 
+let backendProcess;
+function startBackend() {
+    const javaExecutable = 'java';
+    let jarPath;
+
+    if (app.isPackaged) {
+        jarPath = path.join(process.resourcesPath, 'app.asar.unpacked/target/jc-app-1.0-SNAPSHOT-jar-with-dependencies.jar');
+    } else {
+        jarPath = path.join(__dirname, '../target/jc-app-1.0-SNAPSHOT-jar-with-dependencies.jar');
+    }
+
+    const javaArgs = ['-jar', jarPath]; // 可以添加 -Dserver.port=... 来指定端口
+
+    backendProcess = spawn(javaExecutable, javaArgs);
+
+    backendProcess.stdout.on('data', (data) => {
+        console.log(`[Backend] ${data}`);
+    });
+
+    backendProcess.stderr.on('data', (data) => {
+        console.error(`[Backend ERROR] ${data}`);
+    });
+
+    backendProcess.on('close', (code) => {
+        console.log(`Backend process exited with code ${code}`);
+    });
+}
+
 function createWindow() {
     const win = new BrowserWindow({
         width: 800,
@@ -14,6 +42,7 @@ function createWindow() {
         }
     });
 
+    // 加载 Vue 前端
     if (process.env.NODE_ENV === 'development') {
         win.loadURL('http://localhost:5173'); // Vite 的默认地址
     } else {
@@ -29,10 +58,14 @@ function createWindow() {
 }
 
 app.whenReady().then(() => {
+    startBackend();
     createWindow();
 
     app.on('activate', () => {
         if (BrowserWindow.getAllWindows().length === 0) {
+            if (backendProcess) {
+                backendProcess.kill();
+            }
             createWindow();
         }
     });
@@ -44,6 +77,7 @@ app.on('window-all-closed', () => {
     }
 });
 
+/* 监听来自渲染进程的 fix-request
 ipcMain.on('execute-fix', (event, { isStorage, codes, domain, cookie }) => {
     const javaExecutable = 'java';
 
@@ -80,3 +114,4 @@ ipcMain.on('execute-fix', (event, { isStorage, codes, domain, cookie }) => {
         }
     });
 });
+*/

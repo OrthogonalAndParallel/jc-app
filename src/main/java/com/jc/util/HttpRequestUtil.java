@@ -1,4 +1,4 @@
-package com.yonyou;
+package com.jc.util;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
