@@ -14,16 +14,31 @@ function startBackend() {
         jarPath = path.join(__dirname, '../target/jc-app-1.0-SNAPSHOT-jar-with-dependencies.jar');
     }
 
+    // 检查 JAR 文件是否存在
+    if (!fs.existsSync(jarPath)) {
+        console.error('Backend JAR file not found:', jarPath);
+        return;
+    }
+
     const javaArgs = ['-jar', jarPath]; // 可以添加 -Dserver.port=... 来指定端口
 
     backendProcess = spawn(javaExecutable, javaArgs);
 
     backendProcess.stdout.on('data', (data) => {
-        console.log(`[Backend] ${data}`);
+        const output = data.toString();
+        console.log(`[Backend] ${output}`);
+        // 可以监听特定启动成功的日志
+        if (output.includes('Started') && output.includes('application')) {
+            console.log('Backend application started successfully');
+        }
     });
 
     backendProcess.stderr.on('data', (data) => {
         console.error(`[Backend ERROR] ${data}`);
+    });
+
+    backendProcess.on('error', (error) => {
+        console.error('Failed to start backend process:', error);
     });
 
     backendProcess.on('close', (code) => {

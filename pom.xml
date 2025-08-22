@@ -109,7 +109,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.jc.MainFixer</mainClass>
+                            <mainClass>com.jc.JcApplication</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -124,7 +124,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>com.jc.MainFixer</mainClass>
+                            <mainClass>com.jc.JcApplication</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

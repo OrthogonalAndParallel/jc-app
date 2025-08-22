@@ -23,13 +23,19 @@
 
 ## 命令
 
-### vue、electron 同时调试
+### SpringBoot、vue 同时调试
 ```shell
+JcApplication
 npm run dev
-npm run dev:electron
 ```
 
-### electron 调试
+### vue、electron 同时调试
+```shell
+npm run dev:electron
+npm run dev
+```
+
+### electron、vue 编译后调试
 ```shell
 npm run build:vue
 npm run start

@@ -1,5 +1,7 @@
 package com.jc.user.entity;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import com.jc.util.IdWorker;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,6 +23,7 @@ public class User implements Serializable {
 
     @Id
     @Column(name="id")
+    @JsonSerialize(using = ToStringSerializer.class) // 解决前端Long精度丢失问题
     private Long id;
 
     @Column(name="name")

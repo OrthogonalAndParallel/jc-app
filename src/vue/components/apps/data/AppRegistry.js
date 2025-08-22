@@ -10,7 +10,7 @@ export const AppRegistry = {
     },
     User: {
         component: User,
-        icon: '/assets/git.jpg',
+        icon: '/assets/user.jpg',
         name: 'User',
         initMethod: 'initAndShow'
     }

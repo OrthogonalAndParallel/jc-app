@@ -247,7 +247,7 @@ export default {
     }
 
     .pagination-container {
-      height: 50px;
+      height: 35px;
       display: flex;
       justify-content: center;
       padding: 10px 0;
