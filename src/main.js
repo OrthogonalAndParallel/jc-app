@@ -1,17 +1,44 @@
-const { app, BrowserWindow, ipcMain } = require('electron');
+const { app, BrowserWindow, ipcMain, shell } = require('electron');
 const path = require('path');
 const { spawn } = require('child_process');
 const fs = require('fs');
+const net = require('net');
 
 let backendProcess;
+let backendPort = 8001; // 默认端口
+
+function isPortAvailable(port) {
+    return new Promise((resolve) => {
+        const server = net.createServer();
+        server.listen(port, () => {
+            server.close();
+            resolve(true);
+        });
+        server.on('error', () => {
+            resolve(false);
+        });
+    });
+}
+
 function startBackend() {
     const javaExecutable = 'java';
     let jarPath;
+    let logPath;
 
     if (app.isPackaged) {
         jarPath = path.join(process.resourcesPath, 'app.asar.unpacked/target/jc-app-1.0-SNAPSHOT-jar-with-dependencies.jar');
+        // 在打包应用中，将日志写入用户数据目录
+        logPath = path.join(app.getPath('logs'), 'backend.log');
     } else {
         jarPath = path.join(__dirname, '../target/jc-app-1.0-SNAPSHOT-jar-with-dependencies.jar');
+        // 在开发环境中，将日志写入项目目录
+        logPath = path.join(__dirname, '../backend.log');
+    }
+
+    // 确保日志目录存在
+    const logDir = path.dirname(logPath);
+    if (!fs.existsSync(logDir)) {
+        fs.mkdirSync(logDir, { recursive: true });
     }
 
     // 检查 JAR 文件是否存在
@@ -20,13 +47,35 @@ function startBackend() {
         return;
     }
 
-    const javaArgs = ['-jar', jarPath]; // 可以添加 -Dserver.port=... 来指定端口
+    // 获取用户数据目录，用于存储数据库文件
+    const userDataPath = app.getPath('userData');
+    const dbPath = path.join(userDataPath, 'user.db');
+
+    // 确保用户数据目录存在
+    if (!fs.existsSync(userDataPath)) {
+        fs.mkdirSync(userDataPath, { recursive: true });
+    }
+
+    const javaArgs = [
+        '-jar',
+        jarPath,
+        `-Dserver.port=${backendPort}`,
+        `--logging.file.name=${logPath}`, // 配置 SpringBoot 日志文件
+        `-Dapp.db.path=${dbPath}`  // 传递数据库路径给Java应用
+    ];
+
+    console.log('Starting backend with db path:', dbPath);
+    console.log('Java args:', javaArgs);
 
     backendProcess = spawn(javaExecutable, javaArgs);
 
     backendProcess.stdout.on('data', (data) => {
         const output = data.toString();
         console.log(`[Backend] ${output}`);
+
+        // 写入日志文件
+        fs.appendFileSync(logPath, `[STDOUT] ${output}`);
+
         // 可以监听特定启动成功的日志
         if (output.includes('Started') && output.includes('application')) {
             console.log('Backend application started successfully');
@@ -34,19 +83,40 @@ function startBackend() {
     });
 
     backendProcess.stderr.on('data', (data) => {
-        console.error(`[Backend ERROR] ${data}`);
+        const output = data.toString();
+        console.error(`[Backend ERROR] ${output}`);
+
+        // 写入日志文件
+        fs.appendFileSync(logPath, `[STDERR] ${output}`);
     });
 
     backendProcess.on('error', (error) => {
         console.error('Failed to start backend process:', error);
+        fs.appendFileSync(logPath, `[ERROR] Failed to start backend process: ${error.message}\n`);
     });
 
     backendProcess.on('close', (code) => {
-        console.log(`Backend process exited with code ${code}`);
+        const message = `Backend process exited with code ${code}\n`;
+        console.log(message);
+        fs.appendFileSync(logPath, message);
     });
 }
 
-function createWindow() {
+async function createWindow() {
+
+    // 等待后端启动
+    try {
+        await startBackend();
+        // 等待端口可用
+        let retries = 0;
+        while (!(await isPortAvailable(backendPort)) && retries < 30) {
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            retries++;
+        }
+    } catch (error) {
+        console.error('Failed to start backend:', error);
+    }
+
     const win = new BrowserWindow({
         width: 800,
         height: 600,
@@ -73,14 +143,11 @@ function createWindow() {
 }
 
 app.whenReady().then(() => {
-    startBackend();
+    // startBackend();
     createWindow();
 
     app.on('activate', () => {
         if (BrowserWindow.getAllWindows().length === 0) {
-            if (backendProcess) {
-                backendProcess.kill();
-            }
             createWindow();
         }
     });
@@ -92,41 +159,43 @@ app.on('window-all-closed', () => {
     }
 });
 
-/* 监听来自渲染进程的 fix-request
-ipcMain.on('execute-fix', (event, { isStorage, codes, domain, cookie }) => {
-    const javaExecutable = 'java';
-
-    // const jarPath = path.join(__dirname, '../target/jc-app-1.0-SNAPSHOT-jar-with-dependencies.jar');
-
-    let jarPath;
+// 添加 IPC 监听器，用于打开日志目录
+ipcMain.on('open-logs-folder', (event) => {
+    let logPath;
     if (app.isPackaged) {
-        // 打包模式下，JAR 包被 asarUnpack 解压到 app.asar.unpacked 目录
-        jarPath = path.join(process.resourcesPath, 'app.asar.unpacked/target/jc-app-1.0-SNAPSHOT-jar-with-dependencies.jar');
+        logPath = path.join(app.getPath('logs'), 'backend.log');
     } else {
-        // 开发模式下，路径保持不变
-        jarPath = path.join(__dirname, '../target/jc-app-1.0-SNAPSHOT-jar-with-dependencies.jar');
+        logPath = path.join(__dirname, '../backend.log');
     }
 
-    const javaArgs = ['-jar', jarPath, isStorage, codes, domain, cookie];
-
-    const child = spawn(javaExecutable, javaArgs);
-
-    child.stdout.on('data', (data) => {
-        event.sender.send('log-message', data.toString());
-    });
-
-    child.stderr.on('data', (data) => {
-        event.sender.send('log-message', `[ERROR] ${data.toString()}`);
-    });
-
-    child.on('close', (code) => {
-        if (code === 0) {
-            event.sender.send('log-message', 'Java进程执行完成，成功退出。');
-            event.sender.send('fix-finished', { success: true });
-        } else {
-            event.sender.send('log-message', `Java进程异常退出，错误码: ${code}`);
-            event.sender.send('fix-finished', { success: false, code: code });
+    // 确保日志文件存在
+    if (fs.existsSync(logPath)) {
+        shell.showItemInFolder(logPath);
+    } else {
+        // 如果日志文件不存在，则打开日志目录
+        const logDir = path.dirname(logPath);
+        if (fs.existsSync(logDir)) {
+            shell.openPath(logDir);
         }
-    });
+    }
 });
-*/
+
+// 或者添加一个读取日志内容的监听器
+ipcMain.handle('read-backend-logs', async () => {
+    let logPath;
+    if (app.isPackaged) {
+        logPath = path.join(app.getPath('logs'), 'backend.log');
+    } else {
+        logPath = path.join(__dirname, '../backend.log');
+    }
+
+    try {
+        if (fs.existsSync(logPath)) {
+            const logs = fs.readFileSync(logPath, 'utf8');
+            return logs;
+        }
+        return '日志文件不存在';
+    } catch (error) {
+        return `读取日志失败: ${error.message}`;
+    }
+});

@@ -31,8 +31,9 @@ npm run dev
 
 ### vue、electron 同时调试
 ```shell
-npm run dev:electron
 npm run dev
+mvn clean install
+npm run dev:electron
 ```
 
 ### electron、vue 编译后调试

@@ -23,8 +23,7 @@ public class UserService implements IUserService {
     // 删除用户
     @Override
     public void deleteByIds(List<Long> ids) {
-        userRepository.deleteById(ids.get(0));
-        // userRepository.deleteAllById(ids);
+        userRepository.deleteAllById(ids);
     }
 
     // 返回所有的用户

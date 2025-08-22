@@ -12,7 +12,8 @@ spring:
     # username: root
     # password: root
     # SQLite 配置
-    url: jdbc:sqlite:user.db
+    # url: jdbc:sqlite:user.db
+    url: jdbc:sqlite:${app.db.path:/Users/${user.name}/user.db}
     driver-class-name: org.sqlite.JDBC
     druid:
       test-on-borrow: false
