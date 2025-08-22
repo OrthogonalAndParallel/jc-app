@@ -4,8 +4,8 @@
         :buttons="buttonConfig"
     />
     <div class="content-box">
-      <SlideTransition>
-        <div v-if="showContext === 'form'" class="form-content">
+      <SlideTransition :direction="direction">
+        <div v-if="currentPanel === 'form'" class="form-content">
           <div class="header-actions">
             <el-button-group>
               <el-button @click="saveData()" title="保存">
@@ -22,7 +22,7 @@
             </el-form-item>
           </el-form>
         </div>
-        <div v-if="showContext === 'table'" class="table-content">
+        <div v-if="currentPanel === 'table'" class="table-content">
           <div class="header-actions">
             <el-progress
                 v-if="showProgress"
@@ -88,7 +88,6 @@ export default {
     return {
       name: 'User',
       title: '用户管理',
-      showContext: 'form',
 
       // 表单数据
       form: {
@@ -139,13 +138,6 @@ export default {
     }
   },
   methods: {
-    /**
-     * 改变面板
-     * @param panelName
-     */
-    changePanel(panelName) {
-      this.showContext = panelName
-    },
     // 选择数据
     handleSelectionChange(selection) {
       this.selectedRows = selection;
