@@ -22,7 +22,7 @@
   },
   "build": {
     "appId": "com.youyou.datafixer",
-    "productName": "数据修复工具",
+    "productName": "jc-app",
     "directories": {
       "output": "dist",
       "buildResources": "build"

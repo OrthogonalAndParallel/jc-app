@@ -241,3 +241,250 @@ Identify and stop the process that's listening on port 8001 or configure this ap
 [0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 12:28:04[0;39m [32m[http-nio-8001-exec-1][0;39m [34mINFO [0;39m [1;35mo.s.web.servlet.DispatcherServlet[0;39m - [1;30mCompleted initialization in 1 ms
 [0;39m[STDOUT] worker starting. timestamp left shift [STDOUT] 22, datacenter id bits 5, worker id bits 5, sequence bits 12, workerid 1[STDOUT] Hibernate: select user0_.id as id1_0_0_, user0_.create_time as create_t2_0_0_, user0_.email as email3_0_0_, user0_.name as name4_0_0_, user0_.update_time as update_t5_0_0_ from user user0_ where user0_.id=?
 [STDOUT] Hibernate: insert into user (create_time, email, name, update_time, id) values (?, ?, ?, ?, ?)
+[STDOUT] 
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+[STDOUT]  :: Spring Boot ::               (v2.7.18)
+
+[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:34[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mcom.jc.JcApplication[0;39m - [1;30mStarting JcApplication using Java 21.0.7 on jinchendeMacBook-Pro.local with PID 80180 (/Users/jinchen/Documents/github/jc-app/target/jc-app-1.0-SNAPSHOT-jar-with-dependencies.jar started by jinchen in /Users/jinchen/Documents/github/jc-app)
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:34[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mcom.jc.JcApplication[0;39m - [1;30mNo active profile set, falling back to 1 default profile: "default"
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:34[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - [1;30mBootstrapping Spring Data JPA repositories in DEFAULT mode.
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:34[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - [1;30mFinished Spring Data repository scanning in 57 ms. Found 1 JPA repository interfaces.
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:35[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - [1;30mTomcat initialized with port(s): 8001 (http)
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:35[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.coyote.http11.Http11NioProtocol[0;39m - [1;30mInitializing ProtocolHandler ["http-nio-8001"]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:35[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.catalina.core.StandardService[0;39m - [1;30mStarting service [Tomcat]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:35[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.catalina.core.StandardEngine[0;39m - [1;30mStarting Servlet engine: [Apache Tomcat/9.0.83]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:35[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - [1;30mInitializing Spring embedded WebApplicationContext
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:35[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - [1;30mRoot WebApplicationContext: initialization completed in 1363 ms
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:35[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.h.jpa.internal.util.LogHelper[0;39m - [1;30mHHH000204: Processing PersistenceUnitInfo [name: default]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:35[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35morg.hibernate.Version[0;39m - [1;30mHHH000412: Hibernate ORM core version [WORKING]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:36[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.h.annotations.common.Version[0;39m - [1;30mHCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:36[0;39m [32m[main][0;39m [1;31mERROR[0;39m [1;35mc.alibaba.druid.pool.DruidDataSource[0;39m - [1;30mtestWhileIdle is true, validationQuery not set
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:36[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mc.alibaba.druid.pool.DruidDataSource[0;39m - [1;30m{dataSource-1} inited
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:37[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35morg.hibernate.dialect.Dialect[0;39m - [1;30mHHH000400: Using dialect: com.jc.config.SQLiteDialect
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:38[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.h.e.t.j.p.i.JtaPlatformInitiator[0;39m - [1;30mHHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:38[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - [1;30mInitialized JPA EntityManagerFactory for persistence unit 'default'
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:38[0;39m [32m[main][0;39m [31mWARN [0;39m [1;35mo.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration[0;39m - [1;30mspring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:38[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.coyote.http11.Http11NioProtocol[0;39m - [1;30mStarting ProtocolHandler ["http-nio-8001"]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:38[0;39m [32m[main][0;39m [31mWARN [0;39m [1;35mo.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext[0;39m - [1;30mException encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8001 is already in use
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:38[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - [1;30mClosing JPA EntityManagerFactory for persistence unit 'default'
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:38[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mc.alibaba.druid.pool.DruidDataSource[0;39m - [1;30m{dataSource-1} closed
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:38[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.coyote.http11.Http11NioProtocol[0;39m - [1;30mPausing ProtocolHandler ["http-nio-8001"]
+[0;39m[30mspringweb-demo-[0;39m [31m2025-08-22 13:32:38[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.catalina.core.StandardService[0;39m - [1;30mStopping service [Tomcat]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:38[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.coyote.http11.Http11NioProtocol[0;39m - [1;30mStopping ProtocolHandler ["http-nio-8001"]
+[0;39m[30mspringweb-demo-[0;39m [31m2025-08-22 13:32:38[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.coyote.http11.Http11NioProtocol[0;39m - [1;30mDestroying ProtocolHandler ["http-nio-8001"]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:38[0;39m [32m[main][0;39m [1;31mERROR[0;39m [1;35mo.s.b.d.LoggingFailureAnalysisReporter[0;39m - [1;30m
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8001 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8001 or configure this application to listen on another port.
+
+[0;39mBackend process exited with code 1
+[STDOUT] 
+  .   ____          _            __ _ _
+[STDOUT]  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+[STDOUT]  :: Spring Boot ::               (v2.7.18)
+
+[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:44[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mcom.jc.JcApplication[0;39m - [1;30mStarting JcApplication using Java 21.0.7 on jinchendeMacBook-Pro.local with PID 80201 (/Users/jinchen/Documents/github/jc-app/target/jc-app-1.0-SNAPSHOT-jar-with-dependencies.jar started by jinchen in /Users/jinchen/Documents/github/jc-app)
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:44[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mcom.jc.JcApplication[0;39m - [1;30mNo active profile set, falling back to 1 default profile: "default"
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:45[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - [1;30mBootstrapping Spring Data JPA repositories in DEFAULT mode.
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:45[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - [1;30mFinished Spring Data repository scanning in 56 ms. Found 1 JPA repository interfaces.
+[0;39m[STDOUT] 
+[STDOUT]   .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+[STDOUT]  :: Spring Boot ::               (v2.7.18)
+
+[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:45[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mcom.jc.JcApplication[0;39m - [1;30mStarting JcApplication using Java 21.0.7 on jinchendeMacBook-Pro.local with PID 80214 (/Users/jinchen/Documents/github/jc-app/target/jc-app-1.0-SNAPSHOT-jar-with-dependencies.jar started by jinchen in /Users/jinchen/Documents/github/jc-app)
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:45[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mcom.jc.JcApplication[0;39m - [1;30mNo active profile set, falling back to 1 default profile: "default"
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:46[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - [1;30mTomcat initialized with port(s): 8001 (http)
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:46[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.coyote.http11.Http11NioProtocol[0;39m - [1;30mInitializing ProtocolHandler ["http-nio-8001"]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:46[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.catalina.core.StandardService[0;39m - [1;30mStarting service [Tomcat]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:46[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.catalina.core.StandardEngine[0;39m - [1;30mStarting Servlet engine: [Apache Tomcat/9.0.83]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:46[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - [1;30mInitializing Spring embedded WebApplicationContext
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:46[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - [1;30mRoot WebApplicationContext: initialization completed in 1313 ms
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:46[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - [1;30mBootstrapping Spring Data JPA repositories in DEFAULT mode.
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:46[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - [1;30mFinished Spring Data repository scanning in 64 ms. Found 1 JPA repository interfaces.
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:46[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.h.jpa.internal.util.LogHelper[0;39m - [1;30mHHH000204: Processing PersistenceUnitInfo [name: default]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:46[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35morg.hibernate.Version[0;39m - [1;30mHHH000412: Hibernate ORM core version [WORKING]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:47[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.h.annotations.common.Version[0;39m - [1;30mHCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:47[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - [1;30mTomcat initialized with port(s): 8001 (http)
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:47[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.coyote.http11.Http11NioProtocol[0;39m - [1;30mInitializing ProtocolHandler ["http-nio-8001"]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:47[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.catalina.core.StandardService[0;39m - [1;30mStarting service [Tomcat]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:47[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.catalina.core.StandardEngine[0;39m - [1;30mStarting Servlet engine: [Apache Tomcat/9.0.83]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:47[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - [1;30mInitializing Spring embedded WebApplicationContext
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:47[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - [1;30mRoot WebApplicationContext: initialization completed in 1456 ms
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:47[0;39m [32m[main][0;39m [1;31mERROR[0;39m [1;35mc.alibaba.druid.pool.DruidDataSource[0;39m - [1;30mtestWhileIdle is true, validationQuery not set
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:47[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mc.alibaba.druid.pool.DruidDataSource[0;39m - [1;30m{dataSource-1} inited
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:47[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.h.jpa.internal.util.LogHelper[0;39m - [1;30mHHH000204: Processing PersistenceUnitInfo [name: default]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:47[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35morg.hibernate.Version[0;39m - [1;30mHHH000412: Hibernate ORM core version [WORKING]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:47[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.h.annotations.common.Version[0;39m - [1;30mHCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:47[0;39m [32m[main][0;39m [1;31mERROR[0;39m [1;35mc.alibaba.druid.pool.DruidDataSource[0;39m - [1;30mtestWhileIdle is true, validationQuery not set
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:47[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mc.alibaba.druid.pool.DruidDataSource[0;39m - [1;30m{dataSource-1} inited
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:47[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35morg.hibernate.dialect.Dialect[0;39m - [1;30mHHH000400: Using dialect: com.jc.config.SQLiteDialect
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:48[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.h.e.t.j.p.i.JtaPlatformInitiator[0;39m - [1;30mHHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:48[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - [1;30mInitialized JPA EntityManagerFactory for persistence unit 'default'
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:48[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35morg.hibernate.dialect.Dialect[0;39m - [1;30mHHH000400: Using dialect: com.jc.config.SQLiteDialect
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:48[0;39m [32m[main][0;39m [31mWARN [0;39m [1;35mo.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration[0;39m - [1;30mspring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:49[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.h.e.t.j.p.i.JtaPlatformInitiator[0;39m - [1;30mHHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:49[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - [1;30mInitialized JPA EntityManagerFactory for persistence unit 'default'
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:49[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.coyote.http11.Http11NioProtocol[0;39m - [1;30mStarting ProtocolHandler ["http-nio-8001"]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:49[0;39m [32m[main][0;39m [31mWARN [0;39m [1;35mo.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext[0;39m - [1;30mException encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8001 is already in use
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:49[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - [1;30mClosing JPA EntityManagerFactory for persistence unit 'default'
+[0;39m[30mspringweb-demo-[0;39m [31m2025-08-22 13:32:49[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mc.alibaba.druid.pool.DruidDataSource[0;39m - [1;30m{dataSource-1} closed
+[0;39m[30mspringweb-demo-[0;39m [31m2025-08-22 13:32:49[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.coyote.http11.Http11NioProtocol[0;39m - [1;30mPausing ProtocolHandler ["http-nio-8001"]
+[0;39m[30mspringweb-demo-[0;39m [31m2025-08-22 13:32:49[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.catalina.core.StandardService[0;39m - [1;30mStopping service [Tomcat]
+[0;39m[30mspringweb-demo-[0;39m [31m2025-08-22 13:32:49[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.coyote.http11.Http11NioProtocol[0;39m - [1;30mStopping ProtocolHandler ["http-nio-8001"]
+[0;39m[30mspringweb-demo-[0;39m [31m2025-08-22 13:32:49[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.coyote.http11.Http11NioProtocol[0;39m - [1;30mDestroying ProtocolHandler ["http-nio-8001"]
+[0;39m[30mspringweb-demo-[0;39m [31m2025-08-22 13:32:49[0;39m [32m[main][0;39m [1;31mERROR[0;39m [1;35mo.s.b.d.LoggingFailureAnalysisReporter[0;39m - [1;30m
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8001 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8001 or configure this application to listen on another port.
+
+[0;39mBackend process exited with code 1
+[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:49[0;39m [32m[main][0;39m [31mWARN [0;39m [1;35mo.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration[0;39m - [1;30mspring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:49[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.coyote.http11.Http11NioProtocol[0;39m - [1;30mStarting ProtocolHandler ["http-nio-8001"]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:49[0;39m [32m[main][0;39m [31mWARN [0;39m [1;35mo.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext[0;39m - [1;30mException encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8001 is already in use
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:49[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - [1;30mClosing JPA EntityManagerFactory for persistence unit 'default'
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:49[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mc.alibaba.druid.pool.DruidDataSource[0;39m - [1;30m{dataSource-1} closed
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:49[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.coyote.http11.Http11NioProtocol[0;39m - [1;30mPausing ProtocolHandler ["http-nio-8001"]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:49[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.catalina.core.StandardService[0;39m - [1;30mStopping service [Tomcat]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:49[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.coyote.http11.Http11NioProtocol[0;39m - [1;30mStopping ProtocolHandler ["http-nio-8001"]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:49[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.coyote.http11.Http11NioProtocol[0;39m - [1;30mDestroying ProtocolHandler ["http-nio-8001"]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:32:49[0;39m [32m[main][0;39m [1;31mERROR[0;39m [1;35mo.s.b.d.LoggingFailureAnalysisReporter[0;39m - [1;30m
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8001 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8001 or configure this application to listen on another port.
+
+[0;39mBackend process exited with code 1
+[STDOUT] 
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+[STDOUT]  =========|_|==============|___/=/_/_/_/
+[STDOUT]  :: Spring Boot ::               (v2.7.18)
+
+[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:34:15[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mcom.jc.JcApplication[0;39m - [1;30mStarting JcApplication using Java 21.0.7 on jinchendeMacBook-Pro.local with PID 80791 (/Users/jinchen/Documents/github/jc-app/target/jc-app-1.0-SNAPSHOT-jar-with-dependencies.jar started by jinchen in /Users/jinchen/Documents/github/jc-app)
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:34:15[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mcom.jc.JcApplication[0;39m - [1;30mNo active profile set, falling back to 1 default profile: "default"
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:34:15[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - [1;30mBootstrapping Spring Data JPA repositories in DEFAULT mode.
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:34:15[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - [1;30mFinished Spring Data repository scanning in 65 ms. Found 1 JPA repository interfaces.
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:34:16[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - [1;30mTomcat initialized with port(s): 8001 (http)
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:34:16[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.coyote.http11.Http11NioProtocol[0;39m - [1;30mInitializing ProtocolHandler ["http-nio-8001"]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:34:16[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.catalina.core.StandardService[0;39m - [1;30mStarting service [Tomcat]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:34:16[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.catalina.core.StandardEngine[0;39m - [1;30mStarting Servlet engine: [Apache Tomcat/9.0.83]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:34:16[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - [1;30mInitializing Spring embedded WebApplicationContext
+[0;39m[30mspringweb-demo-[0;39m [31m2025-08-22 13:34:16[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - [1;30mRoot WebApplicationContext: initialization completed in 1512 ms
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:34:16[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.h.jpa.internal.util.LogHelper[0;39m - [1;30mHHH000204: Processing PersistenceUnitInfo [name: default]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:34:17[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35morg.hibernate.Version[0;39m - [1;30mHHH000412: Hibernate ORM core version [WORKING]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:34:17[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.h.annotations.common.Version[0;39m - [1;30mHCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:34:17[0;39m [32m[main][0;39m [1;31mERROR[0;39m [1;35mc.alibaba.druid.pool.DruidDataSource[0;39m - [1;30mtestWhileIdle is true, validationQuery not set
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:34:17[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mc.alibaba.druid.pool.DruidDataSource[0;39m - [1;30m{dataSource-1} inited
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:34:18[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35morg.hibernate.dialect.Dialect[0;39m - [1;30mHHH000400: Using dialect: com.jc.config.SQLiteDialect
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:34:18[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.h.e.t.j.p.i.JtaPlatformInitiator[0;39m - [1;30mHHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:34:18[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - [1;30mInitialized JPA EntityManagerFactory for persistence unit 'default'
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:34:19[0;39m [32m[main][0;39m [31mWARN [0;39m [1;35mo.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration[0;39m - [1;30mspring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:34:19[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.coyote.http11.Http11NioProtocol[0;39m - [1;30mStarting ProtocolHandler ["http-nio-8001"]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:34:19[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - [1;30mTomcat started on port(s): 8001 (http) with context path ''
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 13:34:19[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mcom.jc.JcApplication[0;39m - [1;30mStarted JcApplication in 4.944 seconds (JVM running for 5.652)
+[0;39m[STDOUT] 
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+[STDOUT]  :: Spring Boot ::               (v2.7.18)
+
+[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:12:49[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mcom.jc.JcApplication[0;39m - [1;30mStarting JcApplication using Java 21.0.7 on jinchendeMacBook-Pro.local with PID 84759 (/Users/jinchen/Documents/github/jc-app/target/jc-app-1.0-SNAPSHOT-jar-with-dependencies.jar started by jinchen in /Users/jinchen/Documents/github/jc-app)
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:12:49[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mcom.jc.JcApplication[0;39m - [1;30mNo active profile set, falling back to 1 default profile: "default"
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:12:50[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - [1;30mBootstrapping Spring Data JPA repositories in DEFAULT mode.
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:12:50[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - [1;30mFinished Spring Data repository scanning in 61 ms. Found 1 JPA repository interfaces.
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:12:50[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - [1;30mTomcat initialized with port(s): 8001 (http)
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:12:50[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.coyote.http11.Http11NioProtocol[0;39m - [1;30mInitializing ProtocolHandler ["http-nio-8001"]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:12:50[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.catalina.core.StandardService[0;39m - [1;30mStarting service [Tomcat]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:12:50[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.catalina.core.StandardEngine[0;39m - [1;30mStarting Servlet engine: [Apache Tomcat/9.0.83]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:12:51[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - [1;30mInitializing Spring embedded WebApplicationContext
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:12:51[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - [1;30mRoot WebApplicationContext: initialization completed in 1585 ms
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:12:51[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.h.jpa.internal.util.LogHelper[0;39m - [1;30mHHH000204: Processing PersistenceUnitInfo [name: default]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:12:51[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35morg.hibernate.Version[0;39m - [1;30mHHH000412: Hibernate ORM core version [WORKING]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:12:51[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.h.annotations.common.Version[0;39m - [1;30mHCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:12:51[0;39m [32m[main][0;39m [1;31mERROR[0;39m [1;35mc.alibaba.druid.pool.DruidDataSource[0;39m - [1;30mtestWhileIdle is true, validationQuery not set
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:12:51[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mc.alibaba.druid.pool.DruidDataSource[0;39m - [1;30m{dataSource-1} inited
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:12:52[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35morg.hibernate.dialect.Dialect[0;39m - [1;30mHHH000400: Using dialect: com.jc.config.SQLiteDialect
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:12:53[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.h.e.t.j.p.i.JtaPlatformInitiator[0;39m - [1;30mHHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:12:53[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - [1;30mInitialized JPA EntityManagerFactory for persistence unit 'default'
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:12:53[0;39m [32m[main][0;39m [31mWARN [0;39m [1;35mo.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration[0;39m - [1;30mspring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:12:54[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.coyote.http11.Http11NioProtocol[0;39m - [1;30mStarting ProtocolHandler ["http-nio-8001"]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:12:54[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - [1;30mTomcat started on port(s): 8001 (http) with context path ''
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:12:54[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mcom.jc.JcApplication[0;39m - [1;30mStarted JcApplication in 5.134 seconds (JVM running for 5.758)
+[0;39m[STDOUT] 
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+[STDOUT]  :: Spring Boot ::               (v2.7.18)
+
+[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:13:15[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mcom.jc.JcApplication[0;39m - [1;30mStarting JcApplication using Java 21.0.7 on jinchendeMacBook-Pro.local with PID 84935 (/Users/jinchen/Documents/github/jc-app/target/jc-app-1.0-SNAPSHOT-jar-with-dependencies.jar started by jinchen in /Users/jinchen/Documents/github/jc-app)
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:13:15[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mcom.jc.JcApplication[0;39m - [1;30mNo active profile set, falling back to 1 default profile: "default"
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:13:16[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - [1;30mBootstrapping Spring Data JPA repositories in DEFAULT mode.
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:13:16[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - [1;30mFinished Spring Data repository scanning in 60 ms. Found 1 JPA repository interfaces.
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:13:17[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - [1;30mTomcat initialized with port(s): 8001 (http)
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:13:17[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.coyote.http11.Http11NioProtocol[0;39m - [1;30mInitializing ProtocolHandler ["http-nio-8001"]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:13:17[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.catalina.core.StandardService[0;39m - [1;30mStarting service [Tomcat]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:13:17[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.catalina.core.StandardEngine[0;39m - [1;30mStarting Servlet engine: [Apache Tomcat/9.0.83]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:13:17[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - [1;30mInitializing Spring embedded WebApplicationContext
+[0;39m[30mspringweb-demo-[0;39m [31m2025-08-22 14:13:17[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - [1;30mRoot WebApplicationContext: initialization completed in 1527 ms
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:13:17[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.h.jpa.internal.util.LogHelper[0;39m - [1;30mHHH000204: Processing PersistenceUnitInfo [name: default]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:13:17[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35morg.hibernate.Version[0;39m - [1;30mHHH000412: Hibernate ORM core version [WORKING]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:13:17[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.h.annotations.common.Version[0;39m - [1;30mHCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:13:18[0;39m [32m[main][0;39m [1;31mERROR[0;39m [1;35mc.alibaba.druid.pool.DruidDataSource[0;39m - [1;30mtestWhileIdle is true, validationQuery not set
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:13:18[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mc.alibaba.druid.pool.DruidDataSource[0;39m - [1;30m{dataSource-1} inited
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:13:18[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35morg.hibernate.dialect.Dialect[0;39m - [1;30mHHH000400: Using dialect: com.jc.config.SQLiteDialect
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:13:19[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.h.e.t.j.p.i.JtaPlatformInitiator[0;39m - [1;30mHHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:13:19[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - [1;30mInitialized JPA EntityManagerFactory for persistence unit 'default'
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:13:19[0;39m [32m[main][0;39m [31mWARN [0;39m [1;35mo.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration[0;39m - [1;30mspring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:13:19[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.a.coyote.http11.Http11NioProtocol[0;39m - [1;30mStarting ProtocolHandler ["http-nio-8001"]
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:13:19[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - [1;30mTomcat started on port(s): 8001 (http) with context path ''
+[0;39m[STDOUT] [30mspringweb-demo-[0;39m [31m2025-08-22 14:13:19[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mcom.jc.JcApplication[0;39m - [1;30mStarted JcApplication in 4.454 seconds (JVM running for 5.018)
+[0;39m
